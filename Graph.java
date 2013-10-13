@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 @SuppressWarnings("serial")
 public class Graph extends JFrame {
-	MeineCanvas malf;
+	MainCanvas malf;
 	int aktFunktion = 0;
 	
 
@@ -22,7 +22,7 @@ public class Graph extends JFrame {
 		super(titel);
 		
 		//Создание и добавление холста для рисования
-		malf = new MeineCanvas();
+		malf = new MainCanvas();
 		add(malf);
 		
 		setLayout(new FlowLayout());
@@ -45,7 +45,7 @@ public class Graph extends JFrame {
 		add(f8);
 		
 		//Обработчик событий для кнопок
-		class ActionLausch implements ActionListener{
+		class ActionEvents implements ActionListener{
 			public void actionPerformed(ActionEvent e){
 				String label;
 				label = e.getActionCommand();
@@ -70,20 +70,20 @@ public class Graph extends JFrame {
 				
 			}
 		}
-		f1.addActionListener(new ActionLausch());
-		f2.addActionListener(new ActionLausch());
-		f3.addActionListener(new ActionLausch());
-		f4.addActionListener(new ActionLausch());
-		f5.addActionListener(new ActionLausch());
-		f6.addActionListener(new ActionLausch());
-		f7.addActionListener(new ActionLausch());
-		f8.addActionListener(new ActionLausch());
+		f1.addActionListener(new ActionEvents());
+		f2.addActionListener(new ActionEvents());
+		f3.addActionListener(new ActionEvents());
+		f4.addActionListener(new ActionEvents());
+		f5.addActionListener(new ActionEvents());
+		f6.addActionListener(new ActionEvents());
+		f7.addActionListener(new ActionEvents());
+		f8.addActionListener(new ActionEvents());
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
 	}
 	//@SuppressWarnings("serial")
-	class MeineCanvas extends Canvas {
-		MeineCanvas(){
+	class MainCanvas extends Canvas {
+		MainCanvas(){
 			setBackground(Color.black);
 			setForeground(Color.green);
 		}

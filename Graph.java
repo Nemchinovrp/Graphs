@@ -44,8 +44,6 @@ public class Graph extends JFrame {
 		add(f7);
 		add(f8);
 		
-		//Обработчик событий для кнопок
-		
 		f1.addActionListener(new ActionEvents());
 		f2.addActionListener(new ActionEvents());
 		f3.addActionListener(new ActionEvents());
